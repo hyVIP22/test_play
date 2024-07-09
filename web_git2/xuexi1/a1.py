@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright
+import time
 
 
 with sync_playwright() as p:
@@ -7,3 +8,5 @@ with sync_playwright() as p:
     page.goto('https://www.baidu.com/')
     print(page.title())
     page.pause()
+
+    time.sleep(2)
